@@ -19,7 +19,7 @@ namespace Microsoft.Owin.Security.Infrastructure
             Options = options;
         }
 
-        public TOptions Options { get; set; }
+        public virtual TOptions Options { get; set; }
 
         public override async Task Invoke(IOwinContext context)
         {
