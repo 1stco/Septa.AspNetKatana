@@ -4,6 +4,8 @@
 		<RootNamespace>Microsoft.Owin.Security</RootNamespace>
 		<TargetFramework>$(DefaultNetFxTargetFramework)</TargetFramework>
 		<description>Common types which are shared by the various authentication middleware components.</description>
+		<PackageId>Septa.$(AssemblyName)</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />

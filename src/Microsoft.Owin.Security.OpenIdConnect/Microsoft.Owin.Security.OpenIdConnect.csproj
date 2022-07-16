@@ -4,6 +4,8 @@
 		<RootNamespace>Microsoft.Owin.Security.OpenIdConnect</RootNamespace>
 		<TargetFramework>$(DefaultNetFxTargetFramework)</TargetFramework>
 		<description>Middleware that enables an application to use OpenIdConnect for authentication.</description>
+		<PackageId>Septa.$(AssemblyName)</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="$(IdentityModelVersion)" />
