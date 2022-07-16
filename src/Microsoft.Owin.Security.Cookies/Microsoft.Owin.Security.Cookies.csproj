@@ -4,6 +4,8 @@
 		<RootNamespace>Microsoft.Owin.Security.Cookies</RootNamespace>
 		<TargetFramework>$(DefaultNetFxTargetFramework)</TargetFramework>
 		<description>Middleware that enables an application to use cookie based authentication, similar to ASP.NET's forms authentication.</description>
+		<PackageId>Septa.$(AssemblyName)</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />
