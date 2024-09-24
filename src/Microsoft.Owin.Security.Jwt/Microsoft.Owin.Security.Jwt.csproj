@@ -4,6 +4,11 @@
 		<RootNamespace>Microsoft.Owin.Security.Jwt</RootNamespace>
 		<TargetFramework>$(DefaultNetFxTargetFramework)</TargetFramework>
 		<description>Middleware that enables an application to protect and validate JSON Web Tokens.</description>
+		<PackageId>Septa.$(AssemblyName)</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageVersion>$(VersionPrefix).$(SeptaBuildVersion)</PackageVersion>
+		<Version>$(VersionPrefix).$(SeptaBuildVersion)</Version>
+		<FileVersion>$(VersionPrefix).$(SeptaBuildVersion)</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="$(IdentityModelVersion)" />
@@ -11,11 +16,11 @@
 		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="$(IdentityModelVersion)" />
 		<PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />
+		<PackageReference Include="Microsoft.Owin" Version="$(VersionPrefix)" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="$(IdentityModelVersion)" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Microsoft.Owin.Security.OAuth\Microsoft.Owin.Security.OAuth.csproj" />
 		<ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj" />
-		<ProjectReference Include="..\Microsoft.Owin\Microsoft.Owin.csproj" />
 	</ItemGroup>
 </Project>

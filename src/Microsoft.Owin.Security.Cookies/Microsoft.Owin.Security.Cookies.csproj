@@ -6,12 +6,15 @@
 		<description>Middleware that enables an application to use cookie based authentication, similar to ASP.NET's forms authentication.</description>
 		<PackageId>Septa.$(AssemblyName)</PackageId>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageVersion>$(VersionPrefix).$(SeptaBuildVersion)</PackageVersion>
+		<Version>$(VersionPrefix).$(SeptaBuildVersion)</Version>
+		<FileVersion>$(VersionPrefix).$(SeptaBuildVersion)</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />
+		<PackageReference Include="Microsoft.Owin" Version="$(VersionPrefix)" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj" />
-		<ProjectReference Include="..\Microsoft.Owin\Microsoft.Owin.csproj" />
 	</ItemGroup>
 </Project>

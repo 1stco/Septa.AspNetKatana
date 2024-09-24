@@ -4,13 +4,18 @@
 		<RootNamespace>Microsoft.Owin.Security.OAuth</RootNamespace>
 		<TargetFramework>$(DefaultNetFxTargetFramework)</TargetFramework>
 		<description>Middleware that enables an application to support any standard OAuth 2.0 authentication workflow.</description>
+		<PackageId>Septa.$(AssemblyName)</PackageId>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageVersion>$(VersionPrefix).$(SeptaBuildVersion)</PackageVersion>
+		<Version>$(VersionPrefix).$(SeptaBuildVersion)</Version>
+		<FileVersion>$(VersionPrefix).$(SeptaBuildVersion)</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />
+		<PackageReference Include="Microsoft.Owin" Version="$(VersionPrefix)" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj" />
-		<ProjectReference Include="..\Microsoft.Owin\Microsoft.Owin.csproj" />
 	</ItemGroup>
 </Project>

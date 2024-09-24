@@ -6,13 +6,14 @@
 		<description>Common types which are shared by the various authentication middleware components.</description>
 		<PackageId>Septa.$(AssemblyName)</PackageId>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageVersion>$(VersionPrefix).$(SeptaBuildVersion)</PackageVersion>
+		<Version>$(VersionPrefix).$(SeptaBuildVersion)</Version>
+		<FileVersion>$(VersionPrefix).$(SeptaBuildVersion)</FileVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Owin" Version="$(OwinVersion)" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Microsoft.Owin\Microsoft.Owin.csproj" />
-	</ItemGroup>
+		<PackageReference Include="Microsoft.Owin" Version="$(VersionPrefix)" />
+	</ItemGroup>	
 	<ItemGroup>
 	  <Reference Include="System.Security" />
 	</ItemGroup>

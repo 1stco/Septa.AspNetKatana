@@ -2,6 +2,7 @@
   <PropertyGroup>
     <!-- This repo version -->
     <VersionPrefix>4.2.2</VersionPrefix>
+    <SeptaBuildVersion>35</SeptaBuildVersion>
     <PreReleaseVersionLabel>rtw</PreReleaseVersionLabel>
     <PreReleaseVersionIteration></PreReleaseVersionIteration>
     <DotNetFinalVersionKind Condition="'$(PreReleaseVersionLabel)' == 'rtw'">release</DotNetFinalVersionKind>
