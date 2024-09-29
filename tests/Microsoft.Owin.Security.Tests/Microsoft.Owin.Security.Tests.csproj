@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Owin.Security.Tests</RootNamespace>
     <AssemblyName>Microsoft.Owin.Security.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <NuGetPackageImportStamp>
@@ -146,10 +146,6 @@
     <ProjectReference Include="..\..\src\Microsoft.Owin.Security.OAuth\Microsoft.Owin.Security.OAuth.csproj">
       <Project>{f71e48d0-115a-4105-b332-fccb2139dc23}</Project>
       <Name>Microsoft.Owin.Security.OAuth</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Microsoft.Owin.Security.OpenIdConnect\Microsoft.Owin.Security.OpenIdConnect.csproj">
-      <Project>{AA80B4A3-C885-4A7E-AF1A-FC3E89611988}</Project>
-      <Name>Microsoft.Owin.Security.OpenIdConnect</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\Microsoft.Owin.Security.Jwt\Microsoft.Owin.Security.Jwt.csproj">
       <Project>{cc7e3a76-37b0-4c3d-b666-62dc34f04abc}</Project>

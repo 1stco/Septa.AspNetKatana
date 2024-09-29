@@ -295,4 +295,5 @@ namespace Microsoft.Owin.Security.OpenIdConnect
         /// </summary>
         public ICookieManager CookieManager { get; set; }
     }
+
 }

@@ -9,7 +9,7 @@ using Microsoft.Owin.Security.Notifications;
 namespace Microsoft.Owin.Security.OpenIdConnect
 {
     /// <summary>
-    /// Specifies events which the <see cref="OpenIdConnectAuthenticationMiddleware"></see> invokes to enable developer control over the authentication process. />
+    /// Specifies events which the <see cref="SeptaOpenIdConnectAuthenticationMiddleware"></see> invokes to enable developer control over the authentication process. />
     /// </summary>
     public class OpenIdConnectAuthenticationNotifications
     {

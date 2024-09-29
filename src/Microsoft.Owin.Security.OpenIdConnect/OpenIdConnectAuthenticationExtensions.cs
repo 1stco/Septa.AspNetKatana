@@ -8,12 +8,12 @@ using Microsoft.Owin.Security.OpenIdConnect;
 namespace Owin
 {
     /// <summary>
-    /// Extension methods for using <see cref="OpenIdConnectAuthenticationMiddleware"/>
+    /// Extension methods for using <see cref="SeptaOpenIdConnectAuthenticationMiddleware"/>
     /// </summary>
     public static class OpenIdConnectAuthenticationExtensions
     {
         /// <summary>
-        /// Adds the <see cref="OpenIdConnectAuthenticationMiddleware"/> into the OWIN runtime.
+        /// Adds the <see cref="SeptaOpenIdConnectAuthenticationMiddleware"/> into the OWIN runtime.
         /// </summary>
         /// <param name="app">The <see cref="IAppBuilder"/> passed to the configuration method</param>
         /// <param name="clientId">The application identifier.</param>
@@ -42,7 +42,7 @@ namespace Owin
         }
 
         /// <summary>
-        /// Adds the <see cref="OpenIdConnectAuthenticationMiddleware"/> into the OWIN runtime.
+        /// Adds the <see cref="SeptaOpenIdConnectAuthenticationMiddleware"/> into the OWIN runtime.
         /// </summary>
         /// <param name="app">The <see cref="IAppBuilder"/> passed to the configuration method</param>
         /// <param name="openIdConnectOptions">A <see cref="OpenIdConnectAuthenticationOptions"/> contains settings for obtaining identities using the OpenIdConnect protocol.</param>
@@ -59,7 +59,7 @@ namespace Owin
                 throw new ArgumentNullException("openIdConnectOptions");
             }
 
-            return app.Use(typeof(OpenIdConnectAuthenticationMiddleware), app, openIdConnectOptions);
+            return app.Use(typeof(SeptaOpenIdConnectAuthenticationMiddleware), app, openIdConnectOptions);
         }
     }
 }

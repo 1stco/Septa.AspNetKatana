@@ -30,6 +30,7 @@ var NUGET_AZUREAD_SOURCE=''
 var NUGET_DEPLOY='https://dotnet.myget.org/F/katana-dev/'
 
 log info='PROJECT: ${PROJECT}' if='PROJECT != ""'
+log info='SHIP.VERSION: ${SHIP.VERSION}'
 log info='SHIP.FULL_VERSION: ${SHIP.FULL_VERSION}'
 log info='DEV.FULL_VERSION: ${DEV.FULL_VERSION}'
 log info='SHIP.FILE_VERSION: ${SHIP.FILE_VERSION}'
@@ -49,7 +50,7 @@ var shipping='${new[] {
   "Microsoft.Owin.Security.MicrosoftAccount",
   "Microsoft.Owin.Security.ActiveDirectory",
   "Microsoft.Owin.Security.WsFederation",
-  "Microsoft.Owin.Security.OpenIdConnect",
+  "Septa.Microsoft.Owin.Security.OpenIdConnect",
   "Microsoft.Owin.Security.Jwt",
   "Microsoft.Owin.FileSystems",
   "Microsoft.Owin.StaticFiles",
@@ -216,7 +217,7 @@ var signing='${new List<string>()}'
 
 #nuget-initialize target='initialize'
   var extra='-Source ${NUGET_GALLERY_SOURCE};${NUGET_ASPNET_SOURCE};${NUGET_AZUREAD_SOURCE} -NoCache'
-  nuget-install each='var package in Files.Include("src/**/packages.config","tests/**/packages.config").Exclude("tests/*.Sandbox.*/*")' outputDir='packages'
+  #nuget-install each='var package in Files.Include("src/**/packages.config","tests/**/packages.config").Exclude("tests/*.Sandbox.*/*")' outputDir='packages'
 
 #prep-metapackages target='compile' description='Prep meta-packages'
   for each='var metapackage in metapackages'
@@ -383,6 +384,8 @@ functions
       {
         get 
         {
+		  return "";
+		  
 		  if (OFFICIAL_BUILD && RELEASE_BUILD && FINAL_MILESTONE)
 		  {
 			return "";
@@ -417,11 +420,12 @@ functions
       }
       public string FULL_VERSION 
       {
-        get {return MAJOR + "." + MINOR + "." + PATCH + PRERELEASE;}
+        get {return MAJOR + "." + MINOR + "." + PATCH + PRERELEASE+ "." + BuildNumber();}
       }
       public string FILE_VERSION 
       {
-        get {return MAJOR + "." + MINOR + "." + BuildDate() + "." + BuildNumber();}
+        get {return MAJOR + "." + MINOR + "." + PATCH + PRERELEASE+ "." + BuildNumber();}
+        //get {return MAJOR + "." + MINOR + "." + BuildDate() + "." + BuildNumber();}
       }
     }
   }
